@@ -29,3 +29,6 @@
 @media(max-width:600px){.invitation-copy{font-size:12px}.event-description{font-size:11px}.instagram p:not(.eyebrow){font-size:12px}.story-copy>p:not(.eyebrow):not(.story-signature){font-size:13px}}
 /* Match the supplied transparent mandap's native proportions. */
 .temple-scene{aspect-ratio:1715/917}.temple{object-position:center bottom}
+
+.form-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.primary-button:disabled{opacity:.65;cursor:wait}

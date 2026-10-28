@@ -3,3 +3,8 @@ dist/
 *.local
 .playwright/
 *.tsbuildinfo
+
+server/data/
+
+.env
+server/.env
