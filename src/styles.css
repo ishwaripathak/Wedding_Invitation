@@ -35,3 +35,71 @@
 .rsvp-section .primary-button{background:var(--maroon);color:var(--blush-light)}
 .rsvp-section .primary-button:hover{background:var(--deep)}
 .rsvp-section .rsvp-intro>svg,.rsvp-section .rsvp-success>svg{color:#856736}
+
+/* Pastel pink and pista palette, scoped to the invitation after the opening cover. */
+main>section:not(.hero),.closing,.music-button,.music-error{
+  --paper:#FFF4F7;
+  --ivory:#FCE8EF;
+  --maroon:#435D3A;
+  --deep:#31482B;
+  --gold:#708151;
+  --blush:#FCE8EF;
+  --blush-light:#F7FAEF;
+  --rose-ink:#3E5236;
+  --rose-muted:#59664F;
+  --rose-border:#AAB98D;
+  --pista:#E5EDD5;
+  --pista-light:#F3F7EA;
+  --pink:#FCE8EF;
+  --theme-border:#AAB98D80;
+  color:#45513F;
+}
+body{background:#F3F7EA}
+.invitation,.functions,.instagram,.countdown,.rsvp-section,.closing{background:var(--pink)}
+.date-section,.couple,.video-section,.know-section,.wishes{background:var(--pista-light)}
+.functions{background-image:radial-gradient(ellipse at top,#FFF4F7 0%,transparent 65%)}
+.rsvp-section{background-image:radial-gradient(ellipse at top left,#FFF4F7 0%,transparent 70%)}
+.section-pad .gold,.section-pad .sanskrit,.section-pad .script-word,.section-pad .ornament,.closing .gold,.closing .ornament{color:#596F44}
+.section-pad .muted,.invitation .small-copy,.invitation-copy,.story-copy>p:not(.eyebrow):not(.story-signature),.instagram p:not(.eyebrow),.know-card p,.detail-pending{color:#59664F}
+.section-pad .text-link{border-color:var(--theme-border)}
+.section-pad .ornament span,.closing .ornament span{background:var(--theme-border)}
+.corner-lotus{color:#AAB98D70}
+.date-section,.instagram,.closing,.know-grid,.know-card{border-color:var(--theme-border)}
+@media(max-width:600px){.know-card{border-color:var(--theme-border)!important}}
+.envelope,.revealed-date{background:var(--paper);border-color:var(--rose-border)}
+.envelope{box-shadow:0 15px 35px #435D3A0B}
+.envelope:before,.envelope:after{background:var(--theme-border)}
+.envelope-fold{background:var(--pista);border-color:var(--rose-border)}
+.wax-seal{background:#CAD8AE;color:var(--rose-ink);box-shadow:inset 0 0 0 3px #DFE9CD,0 3px 8px #435D3A20;outline-color:var(--rose-border)}
+.envelope-label{color:#596F44}
+.event-card{background:#F3F7EACC;border-color:var(--rose-border)}
+.event-card:before{border-color:var(--theme-border)}
+.event-icon,.dress-code{color:#596F44}
+.photo-frame,.photo-corner.top-left,.photo-corner.bottom-right{border-color:var(--rose-border)}
+.photo-placeholder{background-color:var(--pink);background-image:repeating-linear-gradient(90deg,transparent 0px,transparent 30px,#AAB98D18 30px,#AAB98D18 31px)}
+.photo-arch{background:var(--pista);border-color:var(--rose-border)}
+.photo-arch:before{border-color:var(--theme-border)}
+.photo-arch p,.photo-note,.photo-caption,.carousel-controls p span{color:#59664F}
+.video-frame{background:#CAD8AE;box-shadow:0 0 0 1px var(--rose-border)}
+.video-poster{background:radial-gradient(ellipse at 50% 120%,#FCE8EF 0%,#E5EDD5 55%,#D4E1BF 100%);border-color:var(--rose-border);color:var(--rose-ink)}
+.video-poster>svg{color:#596F44}
+.film-coming{border-color:var(--rose-border)}
+.play-button{border-color:var(--rose-border);color:var(--rose-ink)}
+.countdown-grid>div{border-color:var(--theme-border)}
+.countdown-grid span,.countdown .small-copy{color:#59664F}
+.attendance label{background:#FFF4F780}
+.attendance label.selected{background:var(--pista);border-color:var(--maroon)}
+.attendance input{accent-color:#596F44}
+input::placeholder,textarea::placeholder{color:#65725B}
+.section-pad input:not([type=radio]),.section-pad select,.section-pad textarea{background:var(--blush-light);border-color:var(--rose-border)}
+.section-pad .primary-button{background:#CAD8AE;color:var(--deep)}
+.section-pad .primary-button:hover{background:#BACD9B}
+.rsvp-section .rsvp-intro>svg,.rsvp-section .rsvp-success>svg{color:#596F44}
+.rsvp-section .form-footnote,.rsvp-section .rsvp-success .small-copy{color:#59664F;opacity:1}
+.wishes form .field-label{color:var(--rose-ink)}
+.wish-empty{background:var(--pink);border-color:var(--theme-border)}
+.wish-empty p,.wish-card footer{color:#59664F}
+.wish-card{background:var(--pink);border-color:var(--theme-border)}
+.footer-date,.footer-note{color:#59664F}
+.back-top{border-color:var(--rose-border)}
+.music-button{background:var(--blush-light);border-color:var(--rose-border);color:var(--rose-ink)}
