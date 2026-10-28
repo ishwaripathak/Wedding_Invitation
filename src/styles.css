@@ -32,3 +32,7 @@
 
 .form-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .primary-button:disabled{opacity:.65;cursor:wait}
+
+/* Give every part of the cover date the requested size on all screens. */
+.hero-date{display:flex;align-items:baseline;justify-content:center;gap:10px;font-size:35px;letter-spacing:.04em}
+.hero-date span{font-size:inherit;letter-spacing:inherit;margin:0;vertical-align:baseline}

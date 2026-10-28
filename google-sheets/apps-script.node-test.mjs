@@ -38,3 +38,14 @@ test('a write failure or unconfirmed flush never reports success; retry recovers
 test('unconfigured scripts provide instructions without exposing spreadsheet data',()=>{
  const h=createHarness();assert.equal(h.get().ok,false);assert.equal(h.post(message()).ok,false);h.state.active=false;assert.throws(()=>h.setup(),/Extensions > Apps Script/);
 });
+test('RSVP email is optional, while nonempty email addresses still require valid formatting',()=>{
+ const h=ready();
+ for(const email of ['', '   ', undefined, null]){
+  const result=h.post({...rsvp(),email});assert.equal(result.ok,true);
+  assert.equal(h.book.getSheetByName('RSVPs').rows.at(-1)[3],'');
+ }
+ assert.equal(h.post({...rsvp(),email:' Guest@Example.Test '}).ok,true);
+ assert.equal(h.book.getSheetByName('RSVPs').rows.at(-1)[3],'guest@example.test');
+ for(const email of ['invalid','guest@invalid', 'x'.repeat(201),false])assert.equal(h.post({...rsvp(),email}).ok,false);
+ assert.equal(h.book.getSheetByName('RSVPs').rows.length,6);
+});

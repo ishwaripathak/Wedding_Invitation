@@ -55,7 +55,7 @@ administrator about that setting; making the spreadsheet public does not fix it.
 
 ## View responses and download Excel
 
-Open the private spreadsheet to see new rows. RSVPs include names, email addresses,
+Open the private spreadsheet to see new rows. RSVPs include names, optional email addresses,
 attendance, guest counts and dietary requests. Messages include the guest's name
 and wish. Only the spreadsheet's existing authorized editors can read these rows.
 
@@ -137,3 +137,13 @@ actual `Code.gs` source. They cover setup, private storage, updates, retries,
 formula escaping, validation, write failures and lock contention. Browser checks
 exercise cross-origin submission and redirects with a local receiver simulation.
 A real Google deployment must still pass the public-site smoke test above.
+
+## Update an existing deployment for optional email
+
+The website no longer requires an RSVP email address. To accept blank emails,
+replace the existing Apps Script code with the current `Code.gs`, save, then use
+**Deploy → Manage deployments → Edit (pencil) → Version: New version → Deploy**.
+Keep the existing deployment and `/exec` URL. Existing response rows are preserved,
+and there is no need to rerun `setup` for this change. Nonempty email addresses
+are still checked for a valid format. Until this Google-side update is deployed,
+the older script will continue to reject blank email addresses.

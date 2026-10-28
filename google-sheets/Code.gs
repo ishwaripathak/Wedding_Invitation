@@ -119,8 +119,8 @@ function validate_(body) {
   if (!/^[a-f0-9]{64}$/i.test(token)) fail_('Invalid editing key.');
   var data = { action: body.action, id: id, token: token, name: text_(body.name, 'Your name', 2, body.action === 'rsvp' ? 100 : 80) };
   if (body.action === 'message') { data.message = text_(body.message, 'Your wish', 5, 600); return data; }
-  data.email = text_(body.email, 'Email address', 3, 200).toLowerCase();
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) fail_('Please enter a valid email address.');
+  data.email = text_(body.email == null ? '' : body.email, 'Email address', 0, 200).toLowerCase();
+  if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) fail_('Please enter a valid email address.');
   if (body.attendance !== 'yes' && body.attendance !== 'no') fail_('Please choose whether you can attend.');
   if (!Number.isInteger(body.guests) || (body.attendance === 'yes' ? body.guests < 1 || body.guests > 6 : body.guests !== 0)) fail_('Please choose a valid number of guests.');
   data.attendance = body.attendance; data.guests = body.guests;
