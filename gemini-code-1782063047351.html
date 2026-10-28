@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishwari Pathak | Android Automotive & Middleware Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .summary {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            margin-left: 1rem;
+            height: 1px;
+            background: #334155;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #334155;
+            font-weight: 500;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            margin-bottom: 1rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--bg-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            body { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ishwari Pathak</h1>
+            <div class="subtitle">Android Automotive & Middleware Engineer</div>
+            <p class="summary">
+                Specializing in AOSP architecture, core system development, and Binder IPC mechanisms. 
+                Focused on engineering high-performance, low-latency middleware components for next-generation vehicle architectures.
+            </p>
+        </header>
+
+        <section id="skills">
+            <h2>Technical Core</h2>
+            <div class="skills-grid">
+                <div class="skill-card">Android OS / AOSP</div>
+                <div class="skill-card">Middleware Dev</div>
+                <div class="skill-card">Vehicle HAL</div>
+                <div class="skill-card">Binder IPC</div>
+                <div class="skill-card">Modern C++</div>
+                <div class="skill-card">Kotlin</div>
+                <div class="skill-card">Linux Kernel</div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Featured Architecture Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">Custom VHAL Service Integration</div>
+                </div>
+                <p class="project-desc">Implemented structured vehicle property routing and low-level communication patterns within the Android Automotive hardware layer, optimizing multi-threaded data stability.</p>
+                <div class="tags">
+                    <span class="tag">AAOS</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">VHAL</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">Binder IPC Performance Optimization</div>
+                </div>
+                <p class="project-desc">Analyzed and restructured continuous transactional boundaries over system services to eliminate payload overhead and reduce cross-process communication delays.</p>
+                <div class="tags">
+                    <span class="tag">AOSP</span>
+                    <span class="tag">Binder IPC</span>
+                    <span class="tag">Middleware</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p class="project-desc" style="margin-bottom: 1.5rem;">Based in India. Available for technical consultation and engineering roles in embedded systems and software architecture.</p>
+            <a href="https://www.linkedin.com/in/ishwari-pathak-34041b177/" target="_blank" class="contact-btn">Connect on LinkedIn</a>
+        </section>
+    </div>
+
+</body>
+</html>
