@@ -21,7 +21,7 @@ Deploy the contents of `dist/` to a static host. Relative Vite asset paths suppo
 
 ## Personalize
 
-All wedding information and asset references live in `src/data/weddingData.ts`. The supplied schedule is January 15–16, 2027, with Hast Melap at 12:30 PM India time. Ganesh Sthapan, Haldi, engagement, Sangeet, wedding, and an unscheduled Mehndi are represented. Unspecified logistics remain visibly pending rather than invented.
+All wedding information and asset references live in `src/data/weddingData.ts`. On January 15, 2027: engagement is 7–9 AM, Ganesh Sthapna and Mandap Murat are 9 AM–12 PM, Haldi begins at 3 PM, and Sangeet is at 7 PM. The wedding is January 16 at 10 AM. All times are India time (IST). Unspecified logistics remain visibly pending rather than invented.
 
 - Set `templeArtwork` to a transparent image URL or a file in `public/`. The hero uses `public/temple.png`, a transparent temple asset prepared from the supplied screenshot. The original local SVG remains available as a fallback. Both image halves use the same source, clipped at the exact center; their scroll transforms open a glowing portal with no scroll locking or artificial runway. Reduced-motion preferences keep the artwork static.
 - Replace `photos` with personal image paths and meaningful alternative text. Without photos, the carousel displays clearly labeled illustrated placeholders.
