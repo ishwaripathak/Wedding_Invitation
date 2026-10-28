@@ -1,0 +1,9 @@
+import {useEffect, useState} from 'react';
+import {ArrowLeft, ArrowRight} from 'lucide-react';
+import {AnimatePresence,motion,useReducedMotion} from 'framer-motion';
+import {weddingData as d} from '../data/weddingData';
+import {Lotus} from './Shared';
+export default function Carousel(){const [index,setIndex]=useState(0);const reduced=useReducedMotion();const photo=d.photos[index];
+useEffect(()=>{setIndex(i=>i%d.photos.length)},[]);
+function move(step:number){setIndex(i=>(i+step+d.photos.length)%d.photos.length)}
+return <div className="carousel" role="region" aria-roledescription="carousel" aria-label="Our moments" onKeyDown={e=>{if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)}} tabIndex={0}><div className="photo-frame"><AnimatePresence mode="wait"><motion.div key={index} className="photo-content" initial={reduced?false:{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:.35}}>{photo.src?<img src={photo.src} alt={photo.alt} loading="lazy"/>:<div className="photo-placeholder"><div className="photo-arch"><Lotus/><span>S <em>&</em> I</span><p>OUR FOREVER BEGINS</p></div><span className="photo-note">Our favourite photographs, coming soon</span></div>}</motion.div></AnimatePresence><span className="photo-corner top-left"/><span className="photo-corner bottom-right"/></div><div className="carousel-controls"><button className="icon-button" aria-label="Previous photograph" onClick={()=>move(-1)}><ArrowLeft size={18}/></button><p aria-live="polite">{String(index+1).padStart(2,'0')} <span>/ {String(d.photos.length).padStart(2,'0')}</span></p><button className="icon-button" aria-label="Next photograph" onClick={()=>move(1)}><ArrowRight size={18}/></button></div><p className="photo-caption" aria-live="polite">{photo.caption}</p></div>}

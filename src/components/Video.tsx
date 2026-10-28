@@ -1,0 +1,5 @@
+import {useState} from 'react';
+import {Play} from 'lucide-react';
+import {weddingData as d} from '../data/weddingData';
+import {Reveal,Lotus} from './Shared';
+export default function Video(){const[playing,setPlaying]=useState(false);return <section className="video-section section-pad"><Reveal><p className="eyebrow gold">BEFORE THE BIG DAY</p><h2>A glimpse of us.</h2><div className="video-frame">{playing&&d.youtubeId?<iframe src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(d.youtubeId)}?autoplay=1`} title="Sagar and Ishwari pre-wedding film" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen/>:<div className="video-poster"><Lotus/><p className="video-script">The beginning of always</p>{d.youtubeId?<button className="play-button" aria-label="Play our pre-wedding film" onClick={()=>setPlaying(true)}><Play size={22} fill="currentColor"/></button>:<span className="film-coming">OUR PRE-WEDDING FILM · COMING SOON</span>}<span className="video-initials">{d.groom.toUpperCase()} & {d.bride.toUpperCase()}</span></div>}</div><p className="small-copy muted">A little film. A lifetime of feelings.</p></Reveal></section>}
