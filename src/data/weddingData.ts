@@ -6,7 +6,12 @@ export const weddingData = {
   engagementNote: 'The celebrations begin with the engagement on the morning of 15 January.',
   invitation: 'With the blessings of Lord Ganesha and the love of our families, we joyfully invite you to celebrate our wedding.',
   families: { groom: 'The Dave family', bride: 'The Pathak family' },
-  venue: { name: 'Venue to be announced', address: 'We’ll share the location with you soon.', mapUrl: '' },
+  venue: {
+    name: 'Agrasen Foundation',
+    nameGujarati: 'અગ્રસેન ફાઉન્ડેશન',
+    address: 'Near, Club O7 Rd, Shela, Ahmedabad, Gujarat 380057',
+    mapUrl: 'https://maps.app.goo.gl/Yr4jwwB1i5K1dKyf6',
+  },
   contact: { name: 'The wedding families', phone: '', email: '' },
   hashtag: '#SagarWedsIshwari', instagramUrl: 'https://www.instagram.com/',
   youtubeId: '', templeArtwork: './temple.png', musicUrl: '',
