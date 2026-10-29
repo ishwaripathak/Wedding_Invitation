@@ -20,8 +20,8 @@ export const weddingData = {
   hashtag: '#SagarWedsIshwari', instagramUrl: 'https://www.instagram.com/',
   youtubeId: '', templeArtwork: './temple.png', musicUrl: '',
   photos: [
-    { src: familyCelebrationOne, alt: 'Sagar and Ishwari seated with family in front of pink drapes', caption: 'Two hearts, surrounded by love.' },
     { src: couplePhoto, alt: 'Sagar and Ishwari smiling at each other', caption: 'The little moments, the forever kind of love.' },
+    { src: familyCelebrationOne, alt: 'Sagar and Ishwari seated with family in front of pink drapes', caption: 'Two hearts, surrounded by love.' },
     { src: familyCelebrationTwo, alt: 'Sagar and Ishwari celebrating with family in green, maroon and gold outfits', caption: 'Two families. One beautiful beginning.' },
   ],
   story: 'Some journeys lead you somewhere. Ours led us to each other. With full hearts and our favourite people by our side, we’re beginning the most beautiful chapter yet.',
