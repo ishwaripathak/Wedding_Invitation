@@ -14,7 +14,7 @@ export const weddingData = {
   },
   contact: { name: 'The wedding families', phone: '', email: '' },
   hashtag: '#SagarWedsIshwari', instagramUrl: 'https://www.instagram.com/',
-  youtubeId: '', musicUrl: '',
+  youtubeId: '', templeArtwork: './temple.png', musicUrl: '',
   // Add your own photos and descriptions here. Empty images show an illustrated placeholder.
   photos: [
     { src: '', alt: 'A favourite moment of Sagar and Ishwari', caption: 'Two hearts. One beautiful beginning.' },
