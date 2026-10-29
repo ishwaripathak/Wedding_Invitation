@@ -1,3 +1,7 @@
+import familyCelebrationOne from '../assets/photos/family-celebration-1.jpg';
+import couplePhoto from '../assets/photos/sagar-ishwari.jpg';
+import familyCelebrationTwo from '../assets/photos/family-celebration-2.jpg';
+
 export const weddingData = {
   bride: 'Ishwari', brideFull: 'Ishwari Pathak', groom: 'Sagar', groomFull: 'Sagar Dave',
   date: '2027-01-16T10:00:00+05:30', dateLabel: '16 January 2027',
@@ -15,11 +19,10 @@ export const weddingData = {
   contact: { name: 'The wedding families', phone: '', email: '' },
   hashtag: '#SagarWedsIshwari', instagramUrl: 'https://www.instagram.com/',
   youtubeId: '', templeArtwork: './temple.png', musicUrl: '',
-  // Add your own photos and descriptions here. Empty images show an illustrated placeholder.
   photos: [
-    { src: '', alt: 'A favourite moment of Sagar and Ishwari', caption: 'Two hearts. One beautiful beginning.' },
-    { src: '', alt: 'Sagar and Ishwari together', caption: 'The little moments, the forever kind of love.' },
-    { src: '', alt: 'A memory from our journey', caption: 'Our next chapter begins with you.' },
+    { src: familyCelebrationOne, alt: 'Sagar and Ishwari seated with family in front of pink drapes', caption: 'Two hearts, surrounded by love.' },
+    { src: couplePhoto, alt: 'Sagar and Ishwari smiling at each other', caption: 'The little moments, the forever kind of love.' },
+    { src: familyCelebrationTwo, alt: 'Sagar and Ishwari celebrating with family in green, maroon and gold outfits', caption: 'Two families. One beautiful beginning.' },
   ],
   story: 'Some journeys lead you somewhere. Ours led us to each other. With full hearts and our favourite people by our side, we’re beginning the most beautiful chapter yet.',
   events: [

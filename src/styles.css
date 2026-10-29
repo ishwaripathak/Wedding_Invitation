@@ -36,3 +36,7 @@
 /* Give every part of the cover date the requested size on all screens. */
 .hero-date{display:flex;align-items:baseline;justify-content:center;gap:10px;font-size:35px;letter-spacing:.04em}
 .hero-date span{font-size:inherit;letter-spacing:inherit;margin:0;vertical-align:baseline}
+
+/* Show each portrait in full inside the existing gold frame. */
+.photo-content.has-photo{aspect-ratio:3/4;background:var(--ivory)}
+.photo-content.has-photo img{object-fit:contain}
