@@ -14,7 +14,7 @@ export default function Hero() {
   const glow = useTransform(scrollYProgress, [0, .35, .85], [0, .9, 0]);
   const artwork = d.templeArtwork || `${import.meta.env.BASE_URL}temple.svg`;
   return <section ref={ref} className="hero" aria-labelledby="hero-title">
-    <div className="hero-grain"/><div className="cloud cloud-one"/><div className="cloud cloud-two"/><div className="cloud cloud-three"/>
+    <div className="hero-grain"/>
     <nav className="hero-nav" aria-label="Main navigation"><a href="#" className="monogram" aria-label="Sagar and Ishwari home">S<span>&</span>I</a><a href="#rsvp" className="hero-rsvp">WE SAVED YOU A SEAT <ArrowUpRight size={13}/></a></nav>
     <motion.div className="hero-heading" style={{opacity: reduced ? 1 : textOpacity}}>
       <p className="eyebrow">A celebration of love</p>
