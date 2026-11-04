@@ -9,6 +9,7 @@ export default function Functions() {
     <div className="event-grid simple-events">
       {d.events.map(event => <Reveal key={event.name} className="event-card">
         <h3>{event.name}</h3>
+        <p className="eyebrow event-date">{event.date}</p>
         <p className="event-time">{event.time} <span>{d.dateParts.timezone}</span></p>
       </Reveal>)}
     </div>
