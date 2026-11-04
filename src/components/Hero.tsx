@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
-import { weddingData as d } from '../data/weddingData';
-export default function Hero() {
+import {useLanguage,useWeddingData} from '../i18n';
+export default function Hero() {const d=useWeddingData();const {t}=useLanguage();
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const {scrollYProgress} = useScroll({target: ref, offset: ['start start', 'end start']});
@@ -15,19 +15,19 @@ export default function Hero() {
   const artwork = d.templeArtwork || `${import.meta.env.BASE_URL}temple.svg`;
   return <section ref={ref} className="hero" aria-labelledby="hero-title">
     <div className="hero-grain"/><div className="cloud cloud-one"/><div className="cloud cloud-two"/><div className="cloud cloud-three"/>
-    <nav className="hero-nav" aria-label="Main navigation"><a href="#" className="monogram" aria-label="Sagar and Ishwari home">S<span>&</span>I</a><a href="#rsvp" className="hero-rsvp">WE SAVED YOU A SEAT <ArrowUpRight size={13}/></a></nav>
+    <nav className="hero-nav" aria-label={t('navigation')}><a href="#" className="monogram" aria-label={t('home')}>S<span>&</span>I</a><a href="#rsvp" className="hero-rsvp">{t('savedSeat')} <ArrowUpRight size={13}/></a></nav>
     <motion.div className="hero-heading" style={{opacity: reduced ? 1 : textOpacity}}>
-      <p className="eyebrow">A celebration of love</p>
-      <h1 id="hero-title"><span>{d.groomFull}</span><em>weds</em><span>{d.brideFull}</span></h1>
+      <p className="eyebrow">{t('celebration')}</p>
+      <h1 id="hero-title"><span>{d.groomFull}</span><em>{t('weds')}</em><span>{d.brideFull}</span></h1>
       <p className="hero-date">{d.dateParts.day} <span>{d.dateParts.month.toUpperCase()}</span> {d.dateParts.year}</p>
       <div className="hero-flourish" aria-hidden="true">✧</div>
     </motion.div>
     <motion.div className="temple-scene" style={{scale: reduced ? 1 : scale, opacity: reduced ? 1 : opacity}}>
       <motion.div className="portal-glow" style={{opacity: reduced ? 0 : glow}} />
-      <motion.img src={artwork} alt="An ornate ivory and gold wedding mandap with three domes, marigold garlands, and hanging bells" className="temple temple-left" style={{x: reduced ? 0 : left}}/>
+      <motion.img src={artwork} alt={t('templeAlt')} className="temple temple-left" style={{x: reduced ? 0 : left}}/>
       <motion.img src={artwork} alt="" aria-hidden="true" className="temple temple-right" style={{x: reduced ? 0 : right}}/>
     </motion.div>
-    <a className="scroll-cue" href="#invitation"><span>SCROLL TO EXPLORE</span><ArrowDown size={15}/></a>
+    <a className="scroll-cue" href="#invitation"><span>{t('scroll')}</span><ArrowDown size={15}/></a>
     <div className="hero-bottom"/>
   </section>;
 }

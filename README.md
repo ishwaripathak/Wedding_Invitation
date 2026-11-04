@@ -22,6 +22,15 @@ npm run test:sheets
 
 Deploy the contents of `dist/` to a static host. Relative Vite asset paths support GitHub Pages. The existing site publishes the static `gh-pages` branch. Set `VITE_GOOGLE_SHEETS_URL` before building, then publish `dist/` there. Source pushes alone do not rebuild the published site.
 
+## Languages and replies
+
+The persistent language buttons offer English, Gujarati and Hindi. Copy is maintained
+in `src/translations.ts`; `src/i18n.tsx` applies it without changing canonical dates,
+map links or spreadsheet values. The selected language is remembered on this device.
+RSVP collects only a name and Yes/No, then shows a confirmation with no edit action.
+The existing Google Sheets receiver accepts these replies; it must be running the
+optional-email version described in the setup guide.
+
 ## Personalize
 
 All wedding information and asset references live in `src/data/weddingData.ts`. On January 15, 2027: engagement is 7–9 AM, Ganesh Sthapna and Mandap Murat are 9 AM–12 PM, Haldi begins at 3 PM, and Sangeet is at 7 PM. The wedding is January 16 at 10 AM. All times are India time (IST). Unspecified logistics remain visibly pending rather than invented.

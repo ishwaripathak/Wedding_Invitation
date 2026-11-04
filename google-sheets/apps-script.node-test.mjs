@@ -49,3 +49,16 @@ test('RSVP email is optional, while nonempty email addresses still require valid
  for(const email of ['invalid','guest@invalid', 'x'.repeat(201),false])assert.equal(h.post({...rsvp(),email}).ok,false);
  assert.equal(h.book.getSheetByName('RSVPs').rows.length,6);
 });
+
+test('name and Yes/No replies from all three languages use the existing sheet without extra required fields',()=>{
+ const h=ready();
+ for(const name of ['Test Guest','અતિથિ પટેલ','अतिथि शर्मा']){
+  for(const attendance of ['yes','no']){
+   const body={action:'rsvp',...identity(),name,attendance,email:'',guests:attendance==='yes'?1:0,dietary:'',website:''};
+   assert.equal(h.post(body).ok,true);assert.equal(h.post(body).ok,true);
+   const row=h.book.getSheetByName('RSVPs').rows.at(-1);
+   assert.equal(row[2],name);assert.equal(row[3],'');assert.equal(row[4],attendance);assert.equal(row[5],attendance==='yes'?1:0);assert.equal(row[6],'');
+  }
+ }
+ assert.equal(h.book.getSheetByName('RSVPs').rows.length,7);
+});

@@ -55,9 +55,12 @@ administrator about that setting; making the spreadsheet public does not fix it.
 
 ## View responses and download Excel
 
-Open the private spreadsheet to see new rows. RSVPs include names, optional email addresses,
-attendance, guest counts and dietary requests. Messages include the guest's name
-and wish. Only the spreadsheet's existing authorized editors can read these rows.
+Open the private spreadsheet to see new rows. The invitation now asks for only a
+name and a **Yes** or **No** button. The existing **Name** and **Attending** columns
+receive that reply (`yes`/`no` in every language). **Guests** is 1 for Yes and 0 for
+No; email and dietary columns stay blank for new replies. Existing rows and column
+headers are preserved. Messages still include the guest's name and wish. Only the
+spreadsheet's existing authorized editors can read these rows.
 
 For an Excel workbook choose **File → Download → Microsoft Excel (.xlsx)**.
 Both tabs are included. Share the sheet only with the family members who should
@@ -91,8 +94,9 @@ The Apps Script URL is bundled into the site and is intentionally public.
 
 Before inviting guests, test one RSVP and one message from the public website in
 an incognito window. Confirm that both rows actually appear in your Google Sheet,
-then remove those test rows. Also edit the RSVP and check that its existing row
-updates instead of creating a duplicate.
+then remove those test rows. The RSVP shows a confirmation after saving, with no
+edit button. Interrupted requests reuse the same submission ID when retried,
+avoiding duplicate rows.
 
 **Local simulations do not authenticate to your Google account or prove a live
 write to your sheet. The deployment URL is configured, but live verification must
@@ -140,7 +144,8 @@ A real Google deployment must still pass the public-site smoke test above.
 
 ## Update an existing deployment for optional email
 
-The website no longer requires an RSVP email address. To accept blank emails,
+The simplified website collects only a name and Yes/No, with no email field.
+To accept blank emails,
 replace the existing Apps Script code with the current `Code.gs`, save, then use
 **Deploy → Manage deployments → Edit (pencil) → Version: New version → Deploy**.
 Keep the existing deployment and `/exec` URL. Existing response rows are preserved,
