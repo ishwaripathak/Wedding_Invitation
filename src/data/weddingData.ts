@@ -18,7 +18,7 @@ export const weddingData = {
   },
   contact: { name: 'The wedding families', phone: '', email: '' },
   hashtag: '#SagarWedsIshwari', instagramUrl: 'https://www.instagram.com/',
-  youtubeId: '', templeArtwork: './temple.png', musicUrl: '',
+  youtubeId: '', driveVideoId: '18rxx6v4ONfL0b_Ac_XVSo9lwvGoriH-F', templeArtwork: './temple.png', musicUrl: '',
   photos: [
     { src: couplePhoto, alt: 'Sagar and Ishwari smiling at each other', caption: 'The little moments, the forever kind of love.' },
     { src: familyCelebrationOne, alt: 'Sagar and Ishwari seated with family in front of pink drapes', caption: 'Two hearts, surrounded by love.' },
@@ -27,7 +27,7 @@ export const weddingData = {
   story: 'Some journeys lead you somewhere. Ours led us to each other. With full hearts and our favourite people by our side, we’re beginning the most beautiful chapter yet.',
   events: [
     { name: 'Engagement', subtitle: 'The beginning of forever', date: '15 January 2027', time: '7:00 AM – 9:00 AM', description: 'Two hearts, two families, and a beautiful promise. Join us for our engagement ceremony.', icon: 'heart', dress: 'Traditional Indian attire' },
-    { name: 'Ganesh Sthapna', subtitle: '& Mandap Murat', date: '15 January 2027', time: '9:00 AM – 12:00 PM', description: 'An auspicious beginning, with prayers, blessings, and the warmth of family.', icon: 'sun', dress: 'Traditional Indian attire' },
+    { name: 'Ganesh Sthapna & Mandap Murat', subtitle: '& Mandap Murat', date: '15 January 2027', time: '9:00 AM – 12:00 PM', description: 'An auspicious beginning, with prayers, blessings, and the warmth of family.', icon: 'sun', dress: 'Traditional Indian attire' },
     { name: 'Haldi', subtitle: 'A little sunshine, a lot of love', date: '15 January 2027', time: 'From 3:00 PM', description: 'Golden hues, happy hearts, and a joyful afternoon.', icon: 'flower', dress: 'Shades of yellow & ivory' },
     { name: 'Sangeet Sandhya', subtitle: 'An evening to remember', date: '15 January 2027', time: '7:00 PM', description: 'An evening of music, dance, and memories as our two families celebrate together.', icon: 'music', dress: 'Festive Indian wear' },
     { name: 'The Wedding', subtitle: 'Hast Melap Mahurat', date: '16 January 2027', time: '10:00 AM', description: 'Sacred vows, seven steps, and a lifetime of togetherness. Join us for our forever.', icon: 'heart', dress: 'Traditional festive attire' },
