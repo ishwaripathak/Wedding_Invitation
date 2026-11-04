@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {ArrowUpRight, Play} from 'lucide-react';
+import {Play} from 'lucide-react';
 import {useLanguage, useWeddingData} from '../i18n';
 import {Reveal, Lotus} from './Shared';
 
@@ -18,7 +18,6 @@ export default function Video() {
           <span className="video-initials">{d.groom.toUpperCase()} & {d.bride.toUpperCase()}</span>
         </div>}
     </div>
-    {driveUrl && <a className="text-link film-open" href={`${driveUrl}/view`} target="_blank" rel="noreferrer">{t('filmOpen')} <ArrowUpRight size={18}/></a>}
     <p className="small-copy muted">{t('filmNote')}</p>
   </Reveal></section>;
 }

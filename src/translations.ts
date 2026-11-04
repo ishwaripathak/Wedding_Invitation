@@ -83,7 +83,6 @@ export const messages = {
   filmTitle: ['A glimpse of us.', 'અમારી એક ઝલક.', 'हमारी एक झलक।'],
   filmAlt: ['Sagar and Ishwari pre-wedding film', 'સાગર અને ઈશ્વરીની પ્રી-વેડિંગ ફિલ્મ', 'सागर और ईश्वरी की प्री-वेडिंग फ़िल्म'],
   filmBeginning: ['The beginning of always', 'જીવનભરના સાથની શરૂઆત', 'जीवनभर के साथ की शुरुआत'],
-  filmOpen: ['Open video', 'વિડિયો ખોલો', 'वीडियो खोलें'],
   filmPlay: ['Play our pre-wedding film', 'અમારી પ્રી-વેડિંગ ફિલ્મ જુઓ', 'हमारी प्री-वेडिंग फ़िल्म देखें'],
   filmSoon: ['Our pre-wedding film · Coming soon', 'અમારી પ્રી-વેડિંગ ફિલ્મ · ટૂંક સમયમાં', 'हमारी प्री-वेडिंग फ़िल्म · जल्द आएगी'],
   filmNote: ['A little film. A lifetime of feelings.', 'એક નાની ફિલ્મ. જીવનભરની લાગણીઓ.', 'एक छोटी फ़िल्म। जीवनभर के एहसास।'],
